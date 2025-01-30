@@ -1,0 +1,433 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #333;
+    padding: 15px;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navbar li {
+    margin: 0 15px;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 4px;
+  }
+  
+  .navbar a:hover {
+    background-color: #555;
+  }
+  
+  /* Home and User Pages */
+  .page {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .page h1 {
+    font-size: 2.5em;
+    color: #333;
+  }
+  
+  .page p {
+    font-size: 1.2em;
+    color: #555;
+  }
+  
+  /* Form Container */
+  .auth-container, .add-user-container {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 25px;
+  }
+  
+  /* Form Fields */
+  .form-field {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #4CAF50;
+  }
+  
+  /* Buttons */
+  button.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.submit-btn:hover {
+    background-color: #45a049;
+  }
+  
+  button.edit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffa500;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  button.edit-btn:hover {
+    background-color: #e68a00;
+  }
+  
+  /* Error and Success Messages */
+  .error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  
+  .error-text {
+    color: #e74c3c;
+    font-size: 12px;
+  }
+  
+  /* User Details */
+  .user-details {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e8f4e8;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-details h3 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .user-details p {
+    font-size: 1.2em;
+    color: #555;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar li {
+      margin-bottom: 10px;
+    }
+  
+    .page h1 {
+      font-size: 2em;
+    }
+  
+    .form-field {
+      margin-bottom: 15px;
+    }
+  
+    .auth-container, .add-user-container {
+      width: 90%;
+      padding: 25px;
+    }
+  }
+/* Basic layout styling for the user page */
+.user-page {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.left-half,
+.right-half {
+  width: 48%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.left-half {
+  background-color: #f9f9f9;
+}
+
+.right-half {
+  background-color: #e9f7e9;
+}
+
+h2 {
+  text-align: center;
+}
+
+button {
+  padding: 8px 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+input {
+  padding: 8px;
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+/* Basic layout styling for the user page */
+.user-page {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Add gap between left and right halves */
+    padding: 20px;
+  }
+  
+  /* Left half styling */
+  .left-half {
+    width: 48%;  /* Takes up 48% of the space */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  /* Right half styling for form */
+  .right-half {
+    width: 48%; /* Takes up 48% of the space */
+    padding: 20px;
+    background-color: #e9f7e9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  /* Heading styling */
+  h2 {
+    text-align: center;
+  }
+  
+  h3 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Button styling */
+  button {
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Input styling */
+  input {
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Make sure the form is visible and user-friendly */
+  input[type="text"] {
+    margin-top: 5px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+  }
+  /* User Page styling */
+.user-page {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .left-half {
+    width: 48%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .right-half {
+    width: 48%;
+    padding: 20px;
+    background-color: #e9f7e9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  h3 {
+    text-align: center;
+  }
+  
+  input {
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Center Content */
+  .home-page {
+    width: 50%;
+    margin: 40px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  /* Form Styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  /* Button */
+  button {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    background: #0056b3;
+  }
+  
+  /* Skills List */
+  h2 {
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    background: #e9ecef;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
