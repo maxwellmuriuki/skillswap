@@ -46,6 +46,17 @@ const AddNewUser = () => {
     return errors;
   };
 
+  // Handle delete user action
+  const handleDelete = async () => {
+    try {
+      await axios.delete(`http://localhost:5000/users/${userDetails.id}`);
+      setUserDetails(null); // Clear the user details from the state
+      setIsEditing(false); // Reset editing state
+    } catch (err) {
+      setError(err.response ? err.response.data.message : 'Error occurred during deletion');
+    }
+  };
+
   useEffect(() => {
     if (userDetails) {
       // If user details are available, pre-populate the form fields
@@ -99,6 +110,10 @@ const AddNewUser = () => {
           <p><strong>Username:</strong> {userDetails.username}</p>
           <p><strong>Email:</strong> {userDetails.email}</p>
           <button onClick={() => setIsEditing(true)}>Edit Profile</button>
+          
+          <button onClick={handleDelete} className="delete-btn">
+            Delete Profile
+          </button>
         </div>
       )}
     </div>

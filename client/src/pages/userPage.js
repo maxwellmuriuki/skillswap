@@ -36,7 +36,7 @@ const UserPage = () => {
         proficiency: parseInt(proficiency),
       });
 
-      // Ensure skills array exists before updating
+     
       setUsers((prevUsers) =>
         prevUsers.map((user) =>
           user.id === selectedUser.id

@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import UserPage from "./pages/userPage";
 import HomePage from "./pages/HomePage";
-import AddNewUser from "./pages/AddNewUser";  // Renamed from UserAuth
+import AddNewUser from "./pages/AddNewUser";  
 import "./App.css";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/users" element={<UserPage />} />
-        <Route path="/auth" element={<AddNewUser />} /> {/* Renamed route */}
+        <Route path="/auth" element={<AddNewUser />} /> 
       </Routes>
     </div>
   );

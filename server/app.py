@@ -222,9 +222,9 @@ class SkillUserListResource(Resource):
 # Add the resources to the API
 api.add_resource(UserListResource, '/users')
 api.add_resource(UserResource, '/users/<int:user_id>')
-api.add_resource(LoginResource, '/login')  # New login route
+api.add_resource(LoginResource, '/login')  
 api.add_resource(SkillListResource, '/skills')
-api.add_resource(SkillResource, '/skills/<int:skill_id>')  # For individual skill CRUD
+api.add_resource(SkillResource, '/skills/<int:skill_id>')  
 api.add_resource(SkillUserListResource, '/skill-user')
 
 if __name__ == '__main__':
